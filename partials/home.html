@@ -1,0 +1,66 @@
+<div ng-controller="controllerEntrevista">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nombre1">Primer Nombre</label>
+                <input type="text" class="form-control" id="nombre1" ng-model="nombre1" >
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nombre2">Segundo Nombre</label>
+                <input type="text" class="form-control" id="nombre2" ng-model="nombre2" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="apellido1">Primer Apellido</label>
+                <input type="text" class="form-control" id="apellido1" ng-model="apellido1" >
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="apellido2">Segundo Apelldo</label>
+                <input type="text" class="form-control" id="apellido2" ng-model="apellido2" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">  
+            <div class="form-group">
+                <label for="etiquetas">Etiquetas</label>
+                <tags-input ng-model="etiquetas"></tags-input>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">  
+            <center>   <button type="button" ng-click="buscar()" class="btn btn-lg" style="background-color: #4CAF50" >Buscar</button></center>
+        </div>
+    </div>
+    <br>
+
+    <table class="table table-bordered table-responsive col-md-12">
+        <tr>
+            <th>Titulo</th>
+            <th>Link Página</th>
+            <th>Página</th>
+            <th>Descripción</th>
+        </tr>
+        <tr ng-repeat="x in names">
+            <td  style="background-color:#f1f1f1">{{ x.title}}</td>
+            <td>{{ x.link}}</td>
+            <td  style="background-color:#f1f1f1">{{ x.displayLink}}</td>
+            <td >{{ x.snippet}}</td>
+        </tr>
+    </table>
+
+
+
+</div>
