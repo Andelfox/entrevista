@@ -18,3 +18,20 @@ body {
 .nema-ime {
 	background-color: red;
 }
+
+#cargador {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+}
+#div_carga {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg-opacity.png) repeat;
+	z-index: 1;
+}

@@ -2,8 +2,8 @@
 
 $aData = json_decode(file_get_contents('php://input'), true);
 
-include '../libs/phpExcel/Classes/PHPExcel.php';
-include '../class/reporteExcel.php';
+include 'libs/phpExcel/Classes/PHPExcel.php';
+include 'class/reporteExcel.php';
 
 $direccion = explode('ajax', getcwd());
 
