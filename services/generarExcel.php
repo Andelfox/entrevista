@@ -2,13 +2,15 @@
 
 $aData = json_decode(file_get_contents('php://input'), true);
 
-include '../libs/phpExcel/Classes/PHPExcel.php';
-include '../class/reporteExcel.php';
+include 'libs/phpExcel/Classes/PHPExcel.php';
+include 'class/reporteExcel.php';
 
-$direccion = explode('ajax', getcwd());
+//$direccion = explode('ajaxc', getcwd());
 
-$sFileName = 'files/informe_' . rand(111111, 999999) . '.xlsx';
-$rutaFisica = $direccion[0] . $sFileName;
+$sFileName = 'services/files/informe_' . rand(111111, 999999) . '.xlsx';
+$rutaFisica = $_SERVER['SERVER_NAME'] ."/". $sFileName;
+
+
 //chmod($rutaFisica, 0777);
 //unlink($rutaFisica);
 
